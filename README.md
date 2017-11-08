@@ -6,6 +6,7 @@ The basic premise is a web-based practice typing application that will allow for
 
 ### Minor goals
 - Keeping my frontend work present and relevant (especially, as is the case presently, where much of my other work is back end related).
+- Where possible aiming to keep the project relatively light on for dependencies.
 - Toy around with some more of the popular libraries and build processes.
 - Ship it :)
 

@@ -6,7 +6,12 @@
   "repository": "https://github.com/Bairstow/trail-typer-reload",
   "author": "Bairstow <joshbairstow@gmail.com>",
   "license": "MIT",
-  "dependencies": {
-    "webpack": "^3.8.1"
+  "scripts": {
+    "start": "webpack-dev-server --open"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "webpack": "^3.8.1",
+    "webpack-dev-server": "^2.9.4"
   }
 }
