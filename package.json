@@ -5,5 +5,8 @@
   "main": "index.js",
   "repository": "https://github.com/Bairstow/trail-typer-reload",
   "author": "Bairstow <joshbairstow@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "webpack": "^3.8.1"
+  }
 }
