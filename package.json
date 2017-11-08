@@ -1,0 +1,9 @@
+{
+  "name": "trail-typer-reload",
+  "version": "1.0.0",
+  "description": "Trail Typer Reload",
+  "main": "index.js",
+  "repository": "https://github.com/Bairstow/trail-typer-reload",
+  "author": "Bairstow <joshbairstow@gmail.com>",
+  "license": "MIT"
+}
