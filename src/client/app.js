@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
 
-import TestComponent from './Test.jsx';
+import Root from 'Components/Root.jsx';
+import storeConfig from './config/storeConfig';
 
 const appContainer = document.querySelector('.app');
+const store = storeConfig();
 
-ReactDOM.render(<TestComponent />, appContainer);
+ReactDOM.render(<Root store={store} />, appContainer);

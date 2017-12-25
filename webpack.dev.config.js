@@ -22,6 +22,12 @@ module.exports = {
       },
     ],
   },
+  resolve: {
+    alias: {
+      Components: path.resolve(__dirname, 'src/client/Components/'),
+    },
+  },
+  devtool: 'eval',
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
   },
