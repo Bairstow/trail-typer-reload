@@ -25,10 +25,12 @@ module.exports = {
   resolve: {
     alias: {
       Components: path.resolve(__dirname, 'src/client/Components/'),
+      Containers: path.resolve(__dirname, 'src/client/Containers/'),
     },
   },
   devtool: 'eval',
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
+    historyApiFallback: true,
   },
 };

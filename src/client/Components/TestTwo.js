@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled, { css } from 'react-emotion';
 
-const RedDiv = styled('div')`
+const TestDiv = styled('div')`
   background: #aaa;
   color: #222;
 `;
@@ -12,7 +12,11 @@ class TestComponent extends Component {
   }
 
   render() {
-    return <RedDiv>Test Component</RedDiv>;
+    return (
+      <TestDiv>
+        Test Two Component<i className="far fa-caret-circle-right" />
+      </TestDiv>
+    );
   }
 }
 
