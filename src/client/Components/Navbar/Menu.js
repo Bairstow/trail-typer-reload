@@ -6,7 +6,7 @@ import { colors, spacing } from 'constants/ui';
 const IconContainer = styled('div')`
   width: 64px;
   font-size: 20px;
-  line-height: ${spacing.x64};
+  line-height: ${spacing.x96};
   text-align: center;
   cursor: pointer;
 

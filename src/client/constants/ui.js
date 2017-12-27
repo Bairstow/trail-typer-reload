@@ -46,6 +46,8 @@ export const spacing = {
   x32: '32px',
   x48: '48px',
   x64: '64px',
+  x96: '96px',
   x128: '128px',
+  x192: '192px',
   x256: '256px',
 };
