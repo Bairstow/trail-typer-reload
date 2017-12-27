@@ -1,18 +1,23 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
+import styled, { css } from 'react-emotion';
 
-// import Navbar from 'Containers/Navbar.js';
-import TestComponent from 'Components/Test';
-import TestTwoComponent from 'Components/TestTwo';
+import Navbar from 'Containers/Navbar';
+import MainPanel from 'Components/MainPanel';
+import Splash from 'Components/Test';
+import Play from 'Components/TestTwo';
 
 const Root = ({ store }) => (
   <Provider store={store}>
     <Router>
-      <div>
-        <Route path="/test" component={TestTwoComponent} />
-        <Route path="/:filter?" component={TestComponent} />
-      </div>
+      <MainPanel>
+        <Navbar />
+        <Route path="/splash" component={Splash} />
+        <Route path="/play/:gameId?" component={Play} />
+        <Route path="/summary/:gameId?" component={Play} />
+        <Route path="/statistics/:filter?" component={Play} />
+      </MainPanel>
     </Router>
   </Provider>
 );

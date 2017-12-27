@@ -12,13 +12,17 @@ module.exports = {
   module: {
     loaders: [
       {
-        test: /\.(js|jsx)$/,
-        exclude: /(node_modules|lib|dist)/,
+        test: /\.js$/,
+        exclude: /(node_modules|dist)/,
         loader: 'babel-loader',
         query: {
           presets: ['env', 'react'],
           plugins: ['emotion'],
         },
+      },
+      {
+        test: /\.css$/,
+        loader: 'style-loader!css-loader',
       },
     ],
   },
@@ -26,6 +30,7 @@ module.exports = {
     alias: {
       Components: path.resolve(__dirname, 'src/client/Components/'),
       Containers: path.resolve(__dirname, 'src/client/Containers/'),
+      constants: path.resolve(__dirname, 'src/client/constants/'),
     },
   },
   devtool: 'eval',
