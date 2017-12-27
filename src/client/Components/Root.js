@@ -15,8 +15,8 @@ const Root = ({ store }) => (
         <Navbar />
         <Route path="/splash" component={Splash} />
         <Route path="/play/:gameId?" component={Play} />
-        <Route path="/summary/:gameId?" component={Play} />
-        <Route path="/statistics/:filter?" component={Play} />
+        <Route path="/statistics/:filter?" component={Splash} />
+        <Route path="/leaderboards/:gameId?" component={Play} />
       </MainPanel>
     </Router>
   </Provider>

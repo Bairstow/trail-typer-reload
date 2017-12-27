@@ -4,7 +4,7 @@ import styled, { css } from 'react-emotion';
 import { colors, spacing } from 'constants/ui';
 
 const IconContainer = styled('div')`
-  width: 64px;
+  width: 96px;
   font-size: 20px;
   line-height: ${spacing.x96};
   text-align: center;

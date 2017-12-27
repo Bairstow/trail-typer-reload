@@ -1,9 +1,23 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import { css } from 'react-emotion';
 
 import { Bar, Divider, Filler } from 'Components/Navbar/StyledComponents';
 import Logo from 'Components/Navbar/Logo';
 import Selector from 'Components/Navbar/Selector';
 import Menu from 'Components/Navbar/Menu';
+
+const linkStyle = css`
+  text-decoration: none;
+
+  & :link {
+    color: inherit;
+  }
+
+  & :visited {
+    color: inherit;
+  }
+`;
 
 class Navbar extends Component {
   constructor(props) {
@@ -15,24 +29,34 @@ class Navbar extends Component {
       {
         text: 'practice',
         iconClassName: 'fas fa-chevron-circle-right',
+        urlPath: 'play',
       },
       {
         text: 'compete',
         iconClassName: 'fas fa-chevron-double-right',
+        urlPath: 'play',
       },
       {
         text: 'statistics',
         iconClassName: 'fas fa-chart-bar',
+        urlPath: 'statistics',
       },
       {
         text: 'leaderboards',
         iconClassName: 'far fa-globe',
+        urlPath: 'leaderboards',
       },
     ];
 
-    const selectorRender = selectorDefinitions.map(selectorProps => (
-      <Selector {...selectorProps} key={selectorProps.text} />
-    ));
+    const selectorRender = selectorDefinitions.map(selectorProps => {
+      const urlString = `/${selectorProps.urlPath}`;
+
+      return (
+        <Link to={urlString} className={linkStyle} key={selectorProps.text}>
+          <Selector {...selectorProps} />
+        </Link>
+      );
+    });
 
     return selectorRender;
   }
@@ -40,7 +64,9 @@ class Navbar extends Component {
   render() {
     return (
       <Bar>
-        <Logo>LOGO</Logo>
+        <Link to={'/'} className={linkStyle}>
+          <Logo>LOGO</Logo>
+        </Link>
         <Divider />
         <Filler>{this.renderSelectors()}</Filler>
         <Divider />
