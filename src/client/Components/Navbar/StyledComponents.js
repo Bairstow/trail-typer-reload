@@ -22,4 +22,6 @@ export const Divider = styled('div')`
 export const Filler = styled('div')`
   height: ${spacing.x64};
   flex-grow: 1;
+  display: flex;
+  justify-content: space-around;
 `;

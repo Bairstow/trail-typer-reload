@@ -3,13 +3,27 @@ import styled, { css } from 'react-emotion';
 
 import { colors, spacing } from 'constants/ui';
 
-/*
-const Selector = styled('div')`
+const SelectorContainer = styled('div')`
   width: ${spacing.x128};
   line-height: ${spacing.x32};
   text-align: center;
+  cursor: pointer;
+
+  & :hover {
+    color: ${colors.nord13};
+  }
 `;
-*/
+
+const IconContainer = styled('i')`
+  font-size: 32px;
+  padding-top: 8px;
+`;
+
+const LabelText = styled('div')`
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 10px;
+`;
 
 class Selector extends Component {
   constructor(props) {
@@ -18,11 +32,12 @@ class Selector extends Component {
 
   render() {
     const { text, iconClassName } = this.props;
+    const displayText = text.toUpperCase();
     return (
-      <div>
-        <i className={iconClassName} />
-        <div>{text}</div>
-      </div>
+      <SelectorContainer>
+        <IconContainer className={iconClassName} />
+        <LabelText>{displayText}</LabelText>
+      </SelectorContainer>
     );
   }
 }

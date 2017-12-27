@@ -8,6 +8,7 @@ const MainPanel = styled('div')`
   color: ${colors.nord4};
   width: 100vw;
   height: 100vh;
+  font-family: 'Open Sans', sans-serif;
 `;
 
 export default MainPanel;

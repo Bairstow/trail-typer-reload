@@ -42,15 +42,10 @@ class Navbar extends Component {
       <Bar>
         <Logo>LOGO</Logo>
         <Divider />
-        {this.renderSelectors()}
-        <Filler />
+        <Filler>{this.renderSelectors()}</Filler>
         <Divider />
-        <Menu>
-          <i className="fas fa-bars" />
-        </Menu>
-        <Menu>
-          <i className="fas fa-user" />
-        </Menu>
+        <Menu iconClassName={'fas fa-user'} />
+        <Menu iconClassName={'fas fa-bars'} />
       </Bar>
     );
   }

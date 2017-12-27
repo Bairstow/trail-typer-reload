@@ -3,10 +3,31 @@ import styled, { css } from 'react-emotion';
 
 import { colors, spacing } from 'constants/ui';
 
-const Menu = styled('div')`
-  width: ${spacing.x64};
+const IconContainer = styled('div')`
+  width: 64px;
+  font-size: 20px;
   line-height: ${spacing.x64};
   text-align: center;
+  cursor: pointer;
+
+  & :hover {
+    color: ${colors.nord13};
+  }
 `;
+
+class Menu extends Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    const { iconClassName } = this.props;
+    return (
+      <IconContainer>
+        <i className={iconClassName} />
+      </IconContainer>
+    );
+  }
+}
 
 export default Menu;
