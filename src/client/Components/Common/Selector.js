@@ -4,8 +4,6 @@ import styled, { css } from 'react-emotion';
 import { colors, spacing } from 'constants/ui';
 
 const SelectorContainer = styled('div')`
-  height: ${spacing.x96};
-  width: ${spacing.x128};
   line-height: ${spacing.x32};
   text-align: center;
   cursor: pointer;
@@ -17,7 +15,6 @@ const SelectorContainer = styled('div')`
 
 const IconContainer = styled('i')`
   font-size: 32px;
-  padding-top: 24px;
 `;
 
 const LabelText = styled('div')`

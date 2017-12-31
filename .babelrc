@@ -1,0 +1,19 @@
+{
+  "plugins": [
+    "emotion"
+  ],
+  "presets": [
+    "env",
+    "stage-0",
+    "react"
+  ],
+  "env": {
+    "development": {
+      "plugins": [
+      ]
+    },
+    "production": {
+      "presets": ["react-optimize"]
+    }
+  }
+}

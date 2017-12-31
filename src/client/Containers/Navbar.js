@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { css } from 'react-emotion';
+import styled, { css } from 'react-emotion';
 
+import { colors, spacing } from 'constants/ui';
 import { Bar, Divider, Filler } from 'Components/Navbar/StyledComponents';
-import Logo from 'Components/Navbar/Logo';
-import Selector from 'Components/Navbar/Selector';
+import Logo from 'Components/Common/Logo';
+import Selector from 'Components/Common/Selector';
 import Menu from 'Components/Navbar/Menu';
 
 const linkStyle = css`
@@ -17,6 +18,12 @@ const linkStyle = css`
   & :visited {
     color: inherit;
   }
+`;
+
+const SelectorContainer = styled.div`
+  height: ${spacing.x96};
+  width: ${spacing.x128};
+  padding-top: 24px;
 `;
 
 class Navbar extends Component {
@@ -53,7 +60,9 @@ class Navbar extends Component {
 
       return (
         <Link to={urlString} className={linkStyle} key={selectorProps.text}>
-          <Selector {...selectorProps} />
+          <SelectorContainer>
+            <Selector {...selectorProps} />
+          </SelectorContainer>
         </Link>
       );
     });
