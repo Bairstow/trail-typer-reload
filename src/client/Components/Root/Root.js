@@ -12,7 +12,7 @@ const Root = ({ store }) => (
     <Router>
       <MainPanel>
         <Navbar />
-        <Route path="/" component={Landing} />
+        <Route exact path="/" component={Landing} />
         <Route path="/play/:gameId?" component={Landing} />
         <Route path="/statistics/:filter?" component={Landing} />
         <Route path="/leaderboards/:gameId?" component={Landing} />

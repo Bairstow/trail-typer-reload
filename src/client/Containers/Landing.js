@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 
-import InfoPanel from 'Components/Landing/InfoPanel';
 import TitlePanel from 'Components/Landing/TitlePanel';
+import InfoPanel from 'Components/Landing/InfoPanel';
+import AboutPanel from 'Components/Landing/AboutPanel';
 
 class Landing extends Component {
   constructor(props) {
@@ -13,6 +14,7 @@ class Landing extends Component {
       <div>
         <TitlePanel />
         <InfoPanel />
+        <AboutPanel />
       </div>
     );
   }
