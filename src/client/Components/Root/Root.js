@@ -6,6 +6,7 @@ import styled, { css } from 'react-emotion';
 import MainPanel from 'Components/Common/MainPanel';
 import Navbar from 'Containers/Navbar';
 import Landing from 'Containers/Landing';
+import Play from 'Containers/Play';
 
 const Root = ({ store }) => (
   <Provider store={store}>
@@ -13,7 +14,7 @@ const Root = ({ store }) => (
       <MainPanel>
         <Navbar />
         <Route exact path="/" component={Landing} />
-        <Route path="/play/:gameId?" component={Landing} />
+        <Route path="/play/:gameId?" component={Play} />
         <Route path="/statistics/:filter?" component={Landing} />
         <Route path="/leaderboards/:gameId?" component={Landing} />
       </MainPanel>
