@@ -28,6 +28,7 @@ module.exports = {
   },
   resolve: {
     alias: {
+      dux: path.resolve(__dirname, 'src/client/dux/'),
       Components: path.resolve(__dirname, 'src/client/Components/'),
       Containers: path.resolve(__dirname, 'src/client/Containers/'),
       constants: path.resolve(__dirname, 'src/client/constants/'),
