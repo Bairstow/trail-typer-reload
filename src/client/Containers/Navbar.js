@@ -73,9 +73,7 @@ class Navbar extends Component {
   render() {
     return (
       <Bar>
-        <Link to={'/'} className={linkStyle}>
-          <Logo>LOGO</Logo>
-        </Link>
+        <Logo>LOGO</Logo>
         <Divider />
         <Filler>{this.renderSelectors()}</Filler>
         <Divider />
