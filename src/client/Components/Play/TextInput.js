@@ -15,20 +15,8 @@ class TextInput extends Component {
   }
 
   render() {
-    const { directHome } = this.props;
-    const testOnClick = e => {
-      e.preventDefault();
-      console.log('Logo clicked');
-      directHome();
-    };
-    return <DetailPanel onClick={testOnClick}>Text Input</DetailPanel>;
+    return <DetailPanel>Text Input</DetailPanel>;
   }
 }
 
-const mapDispatchToProps = dispatch => ({
-  directHome: () => {
-    dispatch(push('/'));
-  },
-});
-
-export default connect(null, mapDispatchToProps)(TextInput);
+export default TextInput;

@@ -7,6 +7,7 @@ import { Bar, Divider, Filler } from 'Components/Navbar/StyledComponents';
 import Logo from 'Components/Common/Logo';
 import Selector from 'Components/Common/Selector';
 import Menu from 'Components/Navbar/Menu';
+import { LinkHome, LinkPractice } from 'Components/Common/navigationLinks';
 
 const linkStyle = css`
   text-decoration: none;
@@ -36,34 +37,33 @@ class Navbar extends Component {
       {
         text: 'practice',
         iconClassName: 'fas fa-chevron-circle-right',
-        urlPath: 'play',
+        LinkComponent: LinkPractice,
       },
       {
         text: 'compete',
         iconClassName: 'fas fa-chevron-double-right',
-        urlPath: 'play',
+        LinkComponent: LinkPractice,
       },
       {
         text: 'statistics',
         iconClassName: 'fas fa-chart-bar',
-        urlPath: 'statistics',
+        LinkComponent: LinkPractice,
       },
       {
         text: 'leaderboards',
         iconClassName: 'far fa-globe',
-        urlPath: 'leaderboards',
+        LinkComponent: LinkPractice,
       },
     ];
 
     const selectorRender = selectorDefinitions.map(selectorProps => {
-      const urlString = `/${selectorProps.urlPath}`;
-
+      const { LinkComponent, text, iconClassName } = selectorProps;
       return (
-        <Link to={urlString} className={linkStyle} key={selectorProps.text}>
+        <LinkComponent>
           <SelectorContainer>
-            <Selector {...selectorProps} />
+            <Selector text={text} iconClassName={iconClassName} />
           </SelectorContainer>
-        </Link>
+        </LinkComponent>
       );
     });
 
@@ -73,7 +73,9 @@ class Navbar extends Component {
   render() {
     return (
       <Bar>
-        <Logo>LOGO</Logo>
+        <LinkHome>
+          <Logo>LOGO</Logo>
+        </LinkHome>
         <Divider />
         <Filler>{this.renderSelectors()}</Filler>
         <Divider />

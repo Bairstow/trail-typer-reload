@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import TrailDisplay from 'Components/Play/TrailDisplay';
-import TextDisplay from 'Components/Play/TextDisplay';
+import TextDisplay from 'Containers/Play/TextDisplay';
 import TextInput from 'Components/Play/TextInput';
 
 class Play extends Component {

@@ -15,7 +15,7 @@ const Root = ({ store }) => (
       <MainPanel>
         <Navbar />
         <Route exact path="/" component={Landing} />
-        <Route path="/play/:gameId?" component={Play} />
+        <Route path="/practice/:gameId?" component={Play} />
         <Route path="/statistics/:filter?" component={Landing} />
         <Route path="/leaderboards/:gameId?" component={Landing} />
       </MainPanel>
