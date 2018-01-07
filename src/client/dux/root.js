@@ -1,10 +1,12 @@
 import { combineReducers } from 'redux-immutable';
 import { routerReducer } from 'react-router-redux';
 
-import { gameAdministrationReducer } from 'dux/gameAdministration';
+import { sessionReducer } from 'dux/session';
+import { gameReducer } from 'dux/game';
 
 const rootReducer = combineReducers({
-  gameAdministrationReducer,
+  session: sessionReducer,
+  game: gameReducer,
   router: routerReducer,
 });
 

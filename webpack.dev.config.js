@@ -33,6 +33,7 @@ module.exports = {
       config: path.resolve(__dirname, 'src/client/config/'),
       Containers: path.resolve(__dirname, 'src/client/Containers/'),
       constants: path.resolve(__dirname, 'src/client/constants/'),
+      mock: path.resolve(__dirname, 'src/mock/'),
       utilities: path.resolve(__dirname, 'src/client/utilities/'),
     },
   },

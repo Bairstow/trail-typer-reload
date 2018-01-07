@@ -1,0 +1,2 @@
+export const fetchNewGameText = () =>
+  `Laboris nostrud salvia actually, blog tote bag fanny pack blue bottle irure vegan distillery succulents fashion axe. Stumptown tilde poutine man bun, celiac pork belly mustache taiyaki. Laboris jean shorts bitters bespoke activated charcoal iceland ramps dolore wayfarers air plant nostrud. Brunch four dollar toast you probably haven't heard of them succulents reprehenderit authentic blue bottle tempor direct trade tacos waistcoat man braid quis next level.'`;

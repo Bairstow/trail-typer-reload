@@ -22,6 +22,10 @@ const Remaining = styled.span`
   color: ${colors.nord4};
 `;
 
+const TextDisplayWrapper = styled(DetailPanel)`
+  font-size: 20px;
+`;
+
 class TextDisplay extends Component {
   static propTypes = {
     children: PropTypes.node,
@@ -56,14 +60,13 @@ class TextDisplay extends Component {
 
   render() {
     const { completed, errored, current, remaining } = this.generateTextStrings();
-    console.log(this.generateTextStrings());
     return (
-      <DetailPanel>
+      <TextDisplayWrapper>
         <Completed>{completed}</Completed>
         <Errored>{errored}</Errored>
         <Current>{current}</Current>
         <Remaining>{remaining}</Remaining>
-      </DetailPanel>
+      </TextDisplayWrapper>
     );
   }
 }

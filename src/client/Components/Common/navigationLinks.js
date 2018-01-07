@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { push } from 'react-router-redux';
 
-import { resetGameState, startPracticeGame } from 'utilities/gameAdministration';
+import { resetGameState, startPracticeGame } from 'utilities/gameActions';
 
 const mapDispatchToProps = dispatch => ({
   resetGameState: resetGameState(dispatch),

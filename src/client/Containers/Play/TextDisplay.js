@@ -18,7 +18,7 @@ class TextDisplay extends Component {
     const textState = {
       targetText: targetText.split(''),
       currentPosition: 15,
-      inError: 0,
+      inError: 3,
     };
     return <TextDisplayComponent {...textState} />;
   }
